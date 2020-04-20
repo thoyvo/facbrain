@@ -151,5 +151,5 @@ render(){
   ); 
 }
 }
-// test image https://images-na.ssl-images-amazon.com/images/I/41fNXKl7olL._AC_.jpg
+
 export default App
