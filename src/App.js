@@ -84,7 +84,6 @@ displayFaceBox = (box) =>{
 
   onButtonSubmit = () =>{
   this.setState({imageUrl: this.state.input})
-  console.log(this.state)
     app.models
     .predict(
       Clarifai.FACE_DETECT_MODEL,
@@ -102,9 +101,8 @@ displayFaceBox = (box) =>{
       
       })
         .then(response => response.json())
-        .then(count =>{
-          this.setState({user:{
-          entries:count}})
+        .then(count => {
+          this.setState(Object.assign(this.state.user, { entries: count}))
         })
 
      }
@@ -153,5 +151,5 @@ render(){
   ); 
 }
 }
-// test image https://images-na.ssl-images-amazon.com/images/I/41fNXKl7olL._AC_.jpg
+
 export default App
